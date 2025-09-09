@@ -1,0 +1,11 @@
+# .gitignore
+
+# Ignorar o ambiente virtual
+.venv/
+
+# Ignorar caches do Python
+__pycache__/
+*.pyc
+
+# IGNORAR A PASTA DE SEGREDOS (MUITO IMPORTANTE)
+.streamlit/secrets.toml

@@ -1,0 +1,10 @@
+# requirements.txt
+streamlit==1.38.0
+pandas==2.2.2
+plotly==5.22.0
+numpy==1.26.4
+scikit-learn==1.5.0
+google-generativeai==0.7.1
+gTTS==2.5.1
+gspread==5.12.4
+gspread-dataframe==4.0.0

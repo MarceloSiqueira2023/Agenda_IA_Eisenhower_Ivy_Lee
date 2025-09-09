@@ -1,0 +1,43 @@
+Manual do Usuário: Painel de Produtividade com IA
+Versão 1.0
+Criado por: Marcelo Siqueira
+Bem-vindo ao seu Assistente de Produtividade!
+Este aplicativo foi projetado para ser sua central de comando pessoal, ajudando você a organizar, priorizar e visualizar suas tarefas de forma inteligente.
+Utilizando metodologias clássicas de produtividade e o poder da Inteligência Artificial, esta ferramenta transforma uma simples lista de tarefas em um sistema dinâmico que trabalha para você.
+Funcionalidades Principais:
+    • Painel Central: Veja suas urgências do dia e ouça um resumo em áudio.
+    • Matriz de Eisenhower Interativa: Visualize todas as suas tarefas em um mapa de urgência vs. importância.
+    • Método Ivy Lee: Foque nas suas 6 tarefas mais críticas, priorizadas automaticamente.
+    • Agrupamento com IA: Deixe que a Inteligência Artificial encontre padrões e agrupe tarefas similares para você.
+Primeiros Passos: Deixando Tudo Pronto
+Para que o aplicativo funcione, uma configuração inicial é necessária.
+1. Ambiente Python:
+    • Este aplicativo requer Python 3.12.
+    • É altamente recomendado criar um ambiente virtual (.venv) para instalar as dependências.
+2. Instalação das Bibliotecas:
+    • Com o ambiente virtual ativado, instale todas as bibliotecas necessárias com um único comando:
+      pip install -r requirements.txt
+3. Conexão com a Planilha Google (Seu Banco de Dados):
+    • O aplicativo salva todas as suas tarefas em uma Planilha Google para que seus dados fiquem seguros e sempre acessíveis.
+    • Siga o guia do Google Cloud para criar uma Conta de Serviço, habilitar as APIs do Drive e do Sheets, e baixar o arquivo de credenciais JSON.
+    • Compartilhe sua Planilha Google com o client_email encontrado no arquivo JSON, dando a ele permissões de "Editor".
+4. Arquivo de Segredos (secrets.toml):
+    • Crie a pasta .streamlit na raiz do projeto e, dentro dela, o arquivo secrets.toml.
+    • Preencha este arquivo com:
+        1. A URL da sua Planilha Google.
+        2. O conteúdo do seu arquivo JSON de credenciais (codificado em Base64 para segurança).
+        3. Sua chave de API do Google Gemini.
+Guia das Ferramentas
+Painel Principal
+A primeira tela que você vê. Ela mostra um resumo das "Urgências do Dia" (tarefas com urgência positiva e status pendente). Use o botão "Ouvir Resumo do Dia" para que o assistente leia esta lista para você.
+🗺️ Matriz de Eisenhower
+O coração do sistema.
+    • Visualização: Todas as suas tarefas pendentes são plotadas em um gráfico de Urgência (eixo X) vs. Importância (eixo Y).
+    • Adicionar Tarefas: Use o formulário no topo da página. Defina um título e use os sliders para definir a urgência e importância de -5 a 5.
+    • Editar e Concluir: Na lista abaixo do gráfico, use o ícone de lápis (✏️) para editar uma tarefa ou o ícone de check (✔️) para marcá-la como concluída. Todas as alterações são salvas automaticamente na sua Planilha Google.
+🎯 Método Ivy Lee
+Esta página aplica o famoso método de produtividade automaticamente. Ela pega todas as suas tarefas pendentes e mostra as 6 mais importantes, ordenadas por Importância e, em seguida, por Urgência. O objetivo é focar em uma de cada vez.
+📦 Agrupamento com IA
+Esta ferramenta poderosa usa a IA do Google Gemini para ler os títulos de todas as suas tarefas e agrupá-las por similaridade de significado.
+    • Uso: Insira sua chave de API do Google Gemini e clique no botão.
+    • Resultado: O sistema criará "grupos semânticos" (ex: todas as tarefas relacionadas a "relatórios", "reuniões com clientes", etc.), ajudando você a planejar blocos de trabalho temático.
