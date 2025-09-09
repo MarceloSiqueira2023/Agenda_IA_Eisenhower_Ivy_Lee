@@ -1,3 +1,6 @@
+# utils.py
+# Versão final com gerenciamento de tags e agrupamento de tarefas por tags
+
 import streamlit as st
 import pandas as pd
 import gspread
